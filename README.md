@@ -127,11 +127,11 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
    - La `Inbound port rule` en el NSG habilita tráfico entrante (p. ej. puerto 3000). Sin esa regla, Azure bloquea por defecto el acceso desde Internet.
 
 
-5. Imagen consumo de CPU (placeholder) e interpretación:
+5. Imagen consumo de CPU e interpretación:
    ![](/images/part1/img18.png)
    - Interpretación: la CPU se eleva porque la rutina de Fibonacci ejecuta operaciones intensivas en CPU en el proceso principal. En VM pequeñas el porcentaje puede llegar al 100% de los vCPU asignados, provocando cola de peticiones y latencia.
 
-6. Resumen de Postman (placeholder) e interpretación:
+6. Resumen de Postmane interpretación:
 7. ![](/images/part1/img19.png)
    - Interpretación: tiempos por petición aumentan con `n` y con concurrencia; si aparecen fallos suelen ser timeouts o 5xx causados por bloqueo de CPU o por colas que agotan recursos. Documentar códigos de estado, tiempos máximos y cantidad de errores en la tabla de resultados.
 
