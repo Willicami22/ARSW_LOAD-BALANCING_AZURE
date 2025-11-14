@@ -268,28 +268,4 @@ newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALAN
    - NSG actúa como firewall a nivel de red (NIC o subnet), definiendo reglas inbound/outbound para permitir o denegar tráfico por puerto, protocolo y origen/destino.
 
 
-11) Diagrama de despliegue (texto para convertir a imagen)
-
-  Cliente (Postman/Newman)
-       |
-       v
-  IP pública (Load Balancer)
-       |
-       v
-  Azure Load Balancer
-    - Frontend IP
-    - Load Balancing Rule: puerto 3000 -> backend 3000
-    - Health Probe: puerto 3000 o ruta /health
-       |
-       +--------------------------------+
-       | Backend Pool                    |
-       |  - VM1 (AZ1) -> NIC -> NSG      |
-       |  - VM2 (AZ2) -> NIC -> NSG      |
-       |  - VM3 (AZ3) -> NIC -> NSG      |
-       +--------------------------------+
-       |
-       v
-  Virtual Network (VNet)
-    - Subnet (e.g. 10.0.1.0/24)
-    - NSG: allow inbound port 3000
 
